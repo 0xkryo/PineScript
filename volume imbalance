@@ -1,0 +1,7 @@
+// Simple volume imbalance spotter
+//Pinev5
+if (close[1] < open[1] and close > open)  // bullish transition
+    if (low > high[1])  // gap between wicks only
+        box.new(bar_index[1], high[1], bar_index, low, bgcolor=color.new(color.green, 85))
+
+// Same logic can be reversed for bearish cases
